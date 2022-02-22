@@ -1,0 +1,1 @@
+aws s3 cp dataset s3://kaggle-writing-student/dataset --recursive --quiet
