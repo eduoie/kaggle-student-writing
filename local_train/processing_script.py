@@ -1,10 +1,7 @@
 import os
 import sys
-from datetime import datetime
 import pandas as pd
 from datetime import datetime
-from time import strftime
-import time
 import re
 
 
@@ -68,8 +65,6 @@ def main():
 
     print('Received arguments {}'.format(args))
     print('Reading input data from {}'.format(input_data_path))
-
-    print("Got Args: {}".format(args))
 
     input_files = [file for file in os.listdir(input_data_path) if file.endswith('train.csv')]
     print('Available input text files: {}'.format(input_files))

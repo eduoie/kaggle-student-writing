@@ -1,21 +1,43 @@
+# About
+
+A project to put prediction models in production for the Kaggle competition 'Feedback Prize - Evaluating Student Writing'
+
+A very simple model using Naive Bayes has been created to make a simple end-to-end sample of data transformation, creation of a feature store, model training and deployment, and a pipeline to tie these steps together.
+
+As the next step, this task is repeated using a more complex transformer model.
+
+The transformer model and processing has been taken from some of the available notebooks of the competition:
+* https://www.kaggle.com/cdeotte/pytorch-bigbird-ner-cv-0-615
+* For a visual explanation, check: https://www.kaggle.com/thedrcat/visual-tutorial-ner-chunking-token-classification/notebook
+
 # Preparation
 
 For local development, a new conda environment has been created 
 
 Follow instructions at `SKLearnProcessor_local_processing.py`:
 ```
-#   1. Install required Python packages:
-#       pip install boto3 sagemaker pandas scikit-learn
-#       pip install 'sagemaker[local]'
+1. Install required Python packages:
+     pip install boto3 sagemaker pandas scikit-learn
+     pip install 'sagemaker[local]'
+
+     ...have Docker ready, etc
 ```
 
-# Local mode development
+## Cloud development
+
+The project is designed to be run using AWS services, specifically on AWS SageMaker
+
+## Local mode development
+
+When working with SageMaker script mode, it is extremelly helpful to be able to debug and test the scripts offline on a local computer.
 
 https://github.com/aws-samples/amazon-sagemaker-local-mode
 
 https://aws.amazon.com/blogs/machine-learning/use-the-amazon-sagemaker-local-mode-to-train-on-your-notebook-instance/
 
-Check `scikit_learn_local_processing` and `local_train` folders
+Check `tutorial_scikit_learn_local_processing` and `local_train` folders
+
+For the transformers model processing, do `pip install torch` on the proper conda environment
 
 **Environment variables for scripts:**
 
